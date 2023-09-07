@@ -1,0 +1,203 @@
+
+Linker Version 8.7.7.190806
+Input Object File: D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ
+Input Object File: D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0002h     001fh    001eh      CODE               _UART0 (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0020h     0023h    0004h      CODE               @ROMDATA_BASE (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\STARTUP1_L.OBJ)
+     00h     0026h     0038h    0013h      CODE               @crom (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     003ch     003fh    0004h      CODE               @UART0_code (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0040h     0062h    0023h      CODE               @start (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0063h     0076h    0014h      CODE               _delay (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0077h     0084h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0085h     012ah    00a6h      CODE               _segment (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     012bh     0140h    0016h      CODE               _arm_initial (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0141h     018ch    004ch      CODE               _stm_setup (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     018dh     019dh    0011h      CODE               _uart_setup (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     019eh     0214h    0077h      CODE               _main (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0215h     023ah    0026h      CODE               _read_data (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0080h     0080h    0001h      DATA     3         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     27        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     29        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     4         @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     5         @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0001h      DATA     3         @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0086h     0086h    0001h      DATA     3         @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0087h     0087h    0001h      DATA     4         @data_rb3c (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     4         @data_rc3c (isr:ra~rh)
+     00h     0089h     0089h    0001h      DATA     3         @data_ra3c (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     2         @data_r13c (isr:ra~rh)
+     00h     008bh     008bh    0001h      DATA     2         @data_r23c (isr:ra~rh)
+     00h     0095h     0096h    0002h      DATA     3         @HCCINIT_kn (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0097h     00a0h    000ah      DATA     0.5       @HCCINIT0_value (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     00a1h     00a1h    0001h      DATA     2         @data_r33c (isr:ra~rh)
+     00h     00a2h     00a2h    0001h      DATA     2         @data_r43c (isr:ra~rh)
+     00h     00a3h     00a3h    0001h      DATA     2         @data_r53c (isr:ra~rh)
+     00h     00a4h     00a4h    0001h      DATA     2         @data_r63c (isr:ra~rh)
+     00h     00a5h     00a5h    0001h      DATA     2         @data_r73c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008ch     008ch    0000h      LOCAL    0         @dummy60 (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _UART0 (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _read_data (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0095h     0095h    0000h      LOCAL    0         @dummy (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     0092h     0094h    0003h      LOCAL    3.6667    _main (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _uart_setup (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _stm_setup (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _arm_initial (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     008eh     0091h    0004h      LOCAL    3.25      _segment (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     008ch     008dh    0002h      LOCAL    5         _delay (D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0077h              _Crom2Prom
+     0077h              _Crom2PromNext
+     0002h              _UART0
+     012bh              _arm_initial
+     002ah              _chn
+     0063h              _delay
+     008ch              _delay_2
+     0095h              _kn
+     019eh              _main
+     0215h              _read_data
+     0026h              _scan
+     0085h              _segment
+     008eh              _segment_2
+     0141h              _stm_setup
+     002fh              _tag
+     018dh              _uart_setup
+     0097h              _value
+     008ah              r13c
+     008bh              r23c
+     00a1h              r33c
+     00a2h              r43c
+     00a3h              r53c
+     00a4h              r63c
+     00a5h              r73c
+     0080h              ra
+     0089h              ra3c
+     0081h              rb
+     0087h              rb3c
+     0082h              rc
+     0088h              rc3c
+     0083h              rd
+     0084h              re
+     0085h              rf
+     0086h              rg
+     001fh              startup_value_1
+
+     Address            Public by Value
+     0002h              _UART0
+     001fh              startup_value_1
+     0026h              _scan
+     002ah              _chn
+     002fh              _tag
+     0063h              _delay
+     0077h              _Crom2Prom
+     0077h              _Crom2PromNext
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+     0085h              rf
+     0085h              _segment
+     0086h              rg
+     0087h              rb3c
+     0088h              rc3c
+     0089h              ra3c
+     008ah              r13c
+     008bh              r23c
+     008ch              _delay_2
+     008eh              _segment_2
+     0095h              _kn
+     0097h              _value
+     00a1h              r33c
+     00a2h              r43c
+     00a3h              r53c
+     00a4h              r63c
+     00a5h              r73c
+     012bh              _arm_initial
+     0141h              _stm_setup
+     018dh              _uart_setup
+     019eh              _main
+     0215h              _read_data
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     0236h    6%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     0236h    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0026h    29%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     0026h    0%
+
+Use Stack Count
+_UART0: 1
+_main: 2
+
+Call Tree
+    @dummy60
+        _UART0 (0)
+            _read_data (1)
+    @dummy
+        _main (0)
+            _uart_setup (1)
+            _stm_setup (1)
+            _arm_initial (1)
+            _segment (1)
+                _Crom2Prom (2)
+                _delay (2)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'D:\Wade\Work\MCU\Holtek MCU\Project\Arm_v2\ARM_V2.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

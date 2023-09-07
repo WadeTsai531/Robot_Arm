@@ -1,0 +1,153 @@
+
+Linker Version 8.7.7.190806
+Input Object File: D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ
+Input Object File: D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0002h     0012h    0011h      CODE               _ISR_ADC (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0013h     0015h    0003h      CODE               @start (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     001ch     001fh    0004h      CODE               @ISR_ADC_code (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0020h     002dh    000eh      CODE               @crom (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     002eh     0041h    0014h      CODE               _delay (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0042h     004fh    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0050h     0119h    00cah      CODE               _segment (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     011ah     0124h    000bh      CODE               _ADC_setup (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0125h     015ah    0036h      CODE               _main (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0080h     0080h    0001h      DATA     3         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     21        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     21        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     2         @data_r11c (isr:ra~rh)
+     00h     0084h     0084h    0001h      DATA     2         @data_r21c (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     2         @data_rc1c (isr:ra~rh)
+     00h     0086h     0086h    0001h      DATA     2         @data_rb1c (isr:ra~rh)
+     00h     008fh     0090h    0002h      DATA     2         @HCCINIT0_cv (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0091h     0091h    0001h      DATA     2         @data_r31c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0087h     0087h    0000h      LOCAL    0         @dummy28 (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0087h     0087h    0000h      LOCAL    0         _ISR_ADC (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     008fh     008fh    0000h      LOCAL    0         @dummy (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     008bh     008eh    0004h      LOCAL    4.5       _main (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0087h     0087h    0000h      LOCAL    0         _ADC_setup (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0089h     008ah    0002h      LOCAL    5         _segment (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+     00h     0087h     0087h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0087h     0088h    0002h      LOCAL    5         _delay (D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     011ah              _ADC_setup
+     0042h              _Crom2Prom
+     0042h              _Crom2PromNext
+     0002h              _ISR_ADC
+     008fh              _cv
+     002eh              _delay
+     0087h              _delay_2
+     0125h              _main
+     0020h              _scan
+     0050h              _segment
+     0089h              _segment_2
+     0024h              _tag
+     0083h              r11c
+     0084h              r21c
+     0091h              r31c
+     0080h              ra
+     0081h              rb
+     0086h              rb1c
+     0082h              rc
+     0085h              rc1c
+
+     Address            Public by Value
+     0002h              _ISR_ADC
+     0020h              _scan
+     0024h              _tag
+     002eh              _delay
+     0042h              _Crom2Prom
+     0042h              _Crom2PromNext
+     0050h              _segment
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              r11c
+     0084h              r21c
+     0085h              rc1c
+     0086h              rb1c
+     0087h              _delay_2
+     0089h              _segment_2
+     008fh              _cv
+     0091h              r31c
+     011ah              _ADC_setup
+     0125h              _main
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     0155h    4%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     0155h    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0012h    14%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     0012h    0%
+
+Use Stack Count
+_ISR_ADC: 0
+_main: 2
+
+Call Tree
+    @dummy28
+        _ISR_ADC (0)
+    @dummy
+        _main (0)
+            _ADC_setup (1)
+            _segment (1)
+                _Crom2Prom (2)
+                _delay (2)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'D:\Wade\Work\MCU\Holtek MCU\Robot Arm Project\Program\Arm_Banch_Sensor\ARM_BANCH_SENSOR.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

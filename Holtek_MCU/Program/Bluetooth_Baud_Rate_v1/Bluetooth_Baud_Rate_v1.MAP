@@ -1,0 +1,179 @@
+
+Linker Version 8.7.7.190806
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0002h     001fh    001eh      CODE               _Uart_R (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0020h     0023h    0004h      CODE               @ROMDATA_BASE (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\STARTUP1_L.OBJ)
+     00h     0026h     0033h    000eh      CODE               @crom (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     003ch     003fh    0004h      CODE               @Uart_R_code (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0040h     0062h    0023h      CODE               @start (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0063h     0076h    0014h      CODE               _delay (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0077h     0087h    0011h      CODE               _UART_Setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0088h     00b8h    0031h      CODE               _main (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     00b9h     00c6h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     00c7h     0106h    0040h      CODE               _Read_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0080h     0080h    0001h      DATA     3         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     25        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     25        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     9         @data_rb3c (isr:ra~rh)
+     00h     0084h     0084h    0001h      DATA     9         @data_rc3c (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     5         @data_ra3c (isr:ra~rh)
+     00h     0086h     0086h    0001h      DATA     2         @data_r13c (isr:ra~rh)
+     00h     0087h     0087h    0001h      DATA     2         @data_r23c (isr:ra~rh)
+     00h     008bh     008ch    0002h      DATA     3         @HCCINIT_kn (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     008dh     0096h    000ah      DATA     0.1       @HCCINIT0_R_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0097h     00a0h    000ah      DATA     0         @HCCINIT0_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     00a1h     00a1h    0001h      DATA     2         @data_r33c (isr:ra~rh)
+     00h     00a2h     00a2h    0001h      DATA     2         @data_r43c (isr:ra~rh)
+     00h     00a3h     00a3h    0001h      DATA     2         @data_r53c (isr:ra~rh)
+     00h     00a4h     00a4h    0001h      DATA     2         @data_r63c (isr:ra~rh)
+     00h     00a5h     00a5h    0001h      DATA     2         @data_r73c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0088h     0088h    0000h      LOCAL    0         @dummy60 (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _Uart_R (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _Read_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     008ah     008ah    0001h      LOCAL    3         _main (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _UART_Setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+     00h     0088h     0089h    0002h      LOCAL    6         _delay (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     00b9h              _Crom2Prom
+     00b9h              _Crom2PromNext
+     0097h              _Data
+     008dh              _R_Data
+     00c7h              _Read_Data
+     0077h              _UART_Setup
+     0002h              _Uart_R
+     0063h              _delay
+     0088h              _delay_2
+     008bh              _kn
+     0088h              _main
+     0026h              _scan
+     002ah              _tag
+     0086h              r13c
+     0087h              r23c
+     00a1h              r33c
+     00a2h              r43c
+     00a3h              r53c
+     00a4h              r63c
+     00a5h              r73c
+     0080h              ra
+     0085h              ra3c
+     0081h              rb
+     0083h              rb3c
+     0082h              rc
+     0084h              rc3c
+     001fh              startup_value_1
+
+     Address            Public by Value
+     0002h              _Uart_R
+     001fh              startup_value_1
+     0026h              _scan
+     002ah              _tag
+     0063h              _delay
+     0077h              _UART_Setup
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rb3c
+     0084h              rc3c
+     0085h              ra3c
+     0086h              r13c
+     0087h              r23c
+     0088h              _main
+     0088h              _delay_2
+     008bh              _kn
+     008dh              _R_Data
+     0097h              _Data
+     00a1h              r33c
+     00a2h              r43c
+     00a3h              r53c
+     00a4h              r63c
+     00a5h              r73c
+     00b9h              _Crom2Prom
+     00b9h              _Crom2PromNext
+     00c7h              _Read_Data
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     00fdh    3%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     00fdh    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0026h    29%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     0026h    0%
+
+Use Stack Count
+_Uart_R: 2
+_main: 1
+_Segment: 1
+
+Call Tree
+    @dummy60
+        _Uart_R (0)
+            _Read_Data (1)
+                _Crom2Prom (2)
+    @dummy
+        _main (0)
+            _UART_Setup (1)
+            _delay (1)
+    _Segment
+        _Crom2Prom (0)
+        _delay (0)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Bluetooth_Baud_Rate_v1\BLUETOOTH_BAUD_RATE_V1.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

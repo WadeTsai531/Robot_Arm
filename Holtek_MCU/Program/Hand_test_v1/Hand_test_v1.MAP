@@ -1,0 +1,206 @@
+
+Linker Version 8.7.7.190806
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     0002h     001fh    001eh      CODE               _Uart_R (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     0020h     0023h    0004h      CODE               @ROMDATA_BASE (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\STARTUP1_L.OBJ)
+     00h     0026h     0033h    000eh      CODE               @crom (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     003ch     003fh    0004h      CODE               @Uart_R_code (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     0040h     0062h    0023h      CODE               @start (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     0063h     0076h    0014h      CODE               _delay (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     0077h     0084h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0085h     014eh    00cah      CODE               _Segment (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     014fh     01a6h    0058h      CODE               _time_setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     01a7h     01d8h    0032h      CODE               _servo_setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     01d9h     01e9h    0011h      CODE               _UART_Setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     01eah     03e6h    01fdh      CODE               _main (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     03e7h     0426h    0040h      CODE               _Read_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     0080h     0080h    0001h      DATA     13        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     79        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     68        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     43        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     48        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0001h      DATA     28        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0086h     0086h    0001h      DATA     34        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0087h     0087h    0001h      DATA     9         @data_rb3c (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     9         @data_rc3c (isr:ra~rh)
+     00h     0089h     0089h    0001h      DATA     5         @data_ra3c (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     2         @data_r13c (isr:ra~rh)
+     00h     008bh     008bh    0001h      DATA     2         @data_r23c (isr:ra~rh)
+     00h     0090h     0091h    0002h      DATA     3         @HCCINIT_kn (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     0092h     009bh    000ah      DATA     2.5       @HCCINIT0_R_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     009ch     00a5h    000ah      DATA     0         @HCCINIT0_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     00a6h     00a6h    0001h      DATA     2         @data_r33c (isr:ra~rh)
+     00h     00a7h     00a7h    0001h      DATA     2         @data_r43c (isr:ra~rh)
+     00h     00a8h     00a8h    0001h      DATA     2         @data_r53c (isr:ra~rh)
+     00h     00a9h     00a9h    0001h      DATA     2         @data_r63c (isr:ra~rh)
+     00h     00aah     00aah    0001h      DATA     2         @data_r73c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008ch     008ch    0000h      LOCAL    0         @dummy60 (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _Uart_R (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _Read_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0090h     0090h    0000h      LOCAL    0         @dummy (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     0090h     0090h    0000h      LOCAL    0         _main (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _UART_Setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _servo_setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _time_setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     008ch     008dh    0002h      LOCAL    11        _delay (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+     00h     008eh     008fh    0002h      LOCAL    5         _Segment (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0077h              _Crom2Prom
+     0077h              _Crom2PromNext
+     009ch              _Data
+     0092h              _R_Data
+     03e7h              _Read_Data
+     0085h              _Segment
+     008eh              _Segment_2
+     01d9h              _UART_Setup
+     0002h              _Uart_R
+     0063h              _delay
+     008ch              _delay_2
+     0090h              _kn
+     01eah              _main
+     0026h              _scan
+     01a7h              _servo_setup
+     002ah              _tag
+     014fh              _time_setup
+     008ah              r13c
+     008bh              r23c
+     00a6h              r33c
+     00a7h              r43c
+     00a8h              r53c
+     00a9h              r63c
+     00aah              r73c
+     0080h              ra
+     0089h              ra3c
+     0081h              rb
+     0087h              rb3c
+     0082h              rc
+     0088h              rc3c
+     0083h              rd
+     0084h              re
+     0085h              rf
+     0086h              rg
+     001fh              startup_value_1
+
+     Address            Public by Value
+     0002h              _Uart_R
+     001fh              startup_value_1
+     0026h              _scan
+     002ah              _tag
+     0063h              _delay
+     0077h              _Crom2PromNext
+     0077h              _Crom2Prom
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+     0085h              rf
+     0085h              _Segment
+     0086h              rg
+     0087h              rb3c
+     0088h              rc3c
+     0089h              ra3c
+     008ah              r13c
+     008bh              r23c
+     008ch              _delay_2
+     008eh              _Segment_2
+     0090h              _kn
+     0092h              _R_Data
+     009ch              _Data
+     00a6h              r33c
+     00a7h              r43c
+     00a8h              r53c
+     00a9h              r63c
+     00aah              r73c
+     014fh              _time_setup
+     01a7h              _servo_setup
+     01d9h              _UART_Setup
+     01eah              _main
+     03e7h              _Read_Data
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     041dh    12%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     041dh    1%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     002bh    33%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     002bh    1%
+
+Use Stack Count
+_Uart_R: 2
+_main: 2
+
+Call Tree
+    @dummy60
+        _Uart_R (0)
+            _Read_Data (1)
+                _Crom2Prom (2)
+    @dummy
+        _main (0)
+            _UART_Setup (1)
+            _servo_setup (1)
+                _time_setup (2)
+            _delay (1)
+            _Segment (1)
+                _Crom2Prom (2)
+                _delay (2)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Hand_test_v1\HAND_TEST_V1.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

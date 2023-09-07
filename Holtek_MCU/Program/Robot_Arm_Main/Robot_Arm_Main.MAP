@@ -1,0 +1,201 @@
+
+Linker Version 8.7.7.190806
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     0002h     001dh    001ch      CODE               _Uart_R (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     001eh     0021h    0004h      CODE               @ROMDATA_BASE (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\STARTUP1_L.OBJ)
+     00h     0024h     0031h    000eh      CODE               @crom (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     003ch     003fh    0004h      CODE               @Uart_R_code (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     0040h     0062h    0023h      CODE               @start (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     0063h     0076h    0014h      CODE               _delay (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     0077h     0084h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0085h     014eh    00cah      CODE               _Segment (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     014fh     019eh    0050h      CODE               _stm_setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     019fh     01d0h    0032h      CODE               _servo_setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     01d1h     01e1h    0011h      CODE               _UART_Setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     01e2h     036ah    0189h      CODE               _main (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     036bh     0390h    0026h      CODE               _Read_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     0080h     0080h    0001h      DATA     3         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     65        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     59        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     30        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     30        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0001h      DATA     18        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0086h     0086h    0001h      DATA     24        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0087h     0087h    0001h      DATA     4         @data_rb3c (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     4         @data_rc3c (isr:ra~rh)
+     00h     0089h     0089h    0001h      DATA     3         @data_ra3c (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     2         @data_r13c (isr:ra~rh)
+     00h     008bh     008bh    0001h      DATA     2         @data_r23c (isr:ra~rh)
+     00h     0091h     0092h    0002h      DATA     3         @HCCINIT_kn (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     0093h     009ch    000ah      DATA     2         @HCCINIT0_R_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     009dh     009dh    0001h      DATA     2         @data_r33c (isr:ra~rh)
+     00h     009eh     009eh    0001h      DATA     2         @data_r43c (isr:ra~rh)
+     00h     009fh     009fh    0001h      DATA     2         @data_r53c (isr:ra~rh)
+     00h     00a0h     00a0h    0001h      DATA     2         @data_r63c (isr:ra~rh)
+     00h     00a1h     00a1h    0001h      DATA     2         @data_r73c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008ch     008ch    0000h      LOCAL    0         @dummy60 (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _Uart_R (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _Read_Data (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     0091h     0091h    0000h      LOCAL    0         @dummy (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     0090h     0090h    0001h      LOCAL    6         _main (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _UART_Setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _servo_setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _stm_setup (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     008eh     008fh    0002h      LOCAL    6         _Segment (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+     00h     008ch     008ch    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     008ch     008dh    0002h      LOCAL    5         _delay (D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0077h              _Crom2Prom
+     0077h              _Crom2PromNext
+     0093h              _R_Data
+     036bh              _Read_Data
+     0085h              _Segment
+     008eh              _Segment_2
+     01d1h              _UART_Setup
+     0002h              _Uart_R
+     0063h              _delay
+     008ch              _delay_2
+     0091h              _kn
+     01e2h              _main
+     0024h              _scan
+     019fh              _servo_setup
+     014fh              _stm_setup
+     0028h              _tag
+     008ah              r13c
+     008bh              r23c
+     009dh              r33c
+     009eh              r43c
+     009fh              r53c
+     00a0h              r63c
+     00a1h              r73c
+     0080h              ra
+     0089h              ra3c
+     0081h              rb
+     0087h              rb3c
+     0082h              rc
+     0088h              rc3c
+     0083h              rd
+     0084h              re
+     0085h              rf
+     0086h              rg
+     001dh              startup_value_1
+
+     Address            Public by Value
+     0002h              _Uart_R
+     001dh              startup_value_1
+     0024h              _scan
+     0028h              _tag
+     0063h              _delay
+     0077h              _Crom2PromNext
+     0077h              _Crom2Prom
+     0080h              ra
+     0081h              rb
+     0082h              rc
+     0083h              rd
+     0084h              re
+     0085h              rf
+     0085h              _Segment
+     0086h              rg
+     0087h              rb3c
+     0088h              rc3c
+     0089h              ra3c
+     008ah              r13c
+     008bh              r23c
+     008ch              _delay_2
+     008eh              _Segment_2
+     0091h              _kn
+     0093h              _R_Data
+     009dh              r33c
+     009eh              r43c
+     009fh              r53c
+     00a0h              r63c
+     00a1h              r73c
+     014fh              _stm_setup
+     019fh              _servo_setup
+     01d1h              _UART_Setup
+     01e2h              _main
+     036bh              _Read_Data
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     0385h    10%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     0385h    1%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0022h    26%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     0022h    0%
+
+Use Stack Count
+_Uart_R: 1
+_main: 2
+
+Call Tree
+    @dummy60
+        _Uart_R (0)
+            _Read_Data (1)
+    @dummy
+        _main (0)
+            _UART_Setup (1)
+            _servo_setup (1)
+                _stm_setup (2)
+            _Segment (1)
+                _Crom2Prom (2)
+                _delay (2)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'D:\Wade\Project\Robot_Arm\Holtek MCU\Program\Robot_Arm_Main\ROBOT_ARM_MAIN.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)
