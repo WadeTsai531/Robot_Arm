@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import face_recognition
 
-path = '../pic/test_4' # 照片匯入位置
+path = '../pic/test_4'
 images = []
 classNames = []
 my_list = os.listdir(path)
@@ -27,7 +27,7 @@ def Find_encoding(img_s):
 encode_list_know = Find_encoding(images)
 print('Encoding Complete')
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(1)
 
 while True:
     success, img = cam.read()

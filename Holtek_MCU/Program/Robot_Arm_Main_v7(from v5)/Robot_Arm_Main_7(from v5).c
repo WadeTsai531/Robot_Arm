@@ -14,7 +14,7 @@ void Read_Data();
 // Servo 
 #define Servo_deg_0 256
 void time_setup();
-void servo_setup();
+void servo_setup();\
 
 // Step Motor
 #define PUL _pd3

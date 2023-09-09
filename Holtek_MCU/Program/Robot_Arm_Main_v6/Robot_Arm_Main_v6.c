@@ -88,35 +88,35 @@ void main()
 		if(R_Data[0] == 'A') // Thumb
 		{
 			A_deg = (R_Data[1] - 48)*100 + (R_Data[2] - 48)*10 + (R_Data[3] - 48);
-			_stm0rp = A_deg / 18 + 20;
+			_stm0rp = A_deg / 9 + 20;
 			_stm0al = (A_deg + Servo_deg_0)%256; _stm0ah = (A_deg + Servo_deg_0)/256;
 			delay(1);
 		}
 		if(R_Data[0] == 'B') // Index Finger
 		{
 			B_deg = (R_Data[1] - 48)*100 + (R_Data[2] - 48)*10 + (R_Data[3] - 48);
-			_stm1rp = B_deg / 18 + 20;
+			_stm1rp = B_deg / 9 + 20;
 			_stm1al = (B_deg + Servo_deg_0)%256; _stm1ah = (B_deg + Servo_deg_0)/256;
 			delay(1);
 		}
 		if(R_Data[0] == 'C') // Middle Figger
 		{
 			C_deg = (R_Data[1] - 48)*100 + (R_Data[2] - 48)*10 + (R_Data[3] - 48);
-			_stm2rp = C_deg / 18 + 20;
+			_stm2rp = C_deg / 9 + 20;
 			_stm2al = (C_deg + Servo_deg_0)%256; _stm2ah = (C_deg + Servo_deg_0)/256;
 			delay(1);
 		}
 		if(R_Data[0] == 'D') // Ring Figger
 		{
 			D_deg = (R_Data[1] - 48)*100 + (R_Data[2] - 48)*10 + (R_Data[3] - 48);
-			_ptm0rpl = 0; _ptm0rph = D_deg / 18 + 20;
+			_ptm0rpl = 0; _ptm0rph = D_deg / 9 + 20;
 			_ptm0al = (D_deg + Servo_deg_0)%256; _ptm0ah = (D_deg + Servo_deg_0)/256;
 			delay(1);
 		}
 		if(R_Data[0] == 'E') // Pinky
 		{
 			E_deg = (R_Data[1] - 48)*100 + (R_Data[2] - 48)*10 + (R_Data[3] - 48);
-			_ptm1rpl = 0; _ptm1rph = E_deg / 18 + 20;
+			_ptm1rpl = 0; _ptm1rph = E_deg / 9 + 20;
 			_ptm1al = (E_deg + Servo_deg_0)%256; _ptm1ah = (E_deg + Servo_deg_0)/256;
 			delay(1);
 		}
