@@ -1,0 +1,236 @@
+#include "HT66F2390.h"
+#define SEG_Port   _pg
+#define SEG_PortC  _pgc
+#define COM_Port   _pf
+#define COM_PortC  _pfc
+typedef unsigned char u8;
+typedef char   s8;
+typedef unsigned short u16;
+typedef short   s16;
+typedef unsigned long u32;
+typedef long   s32;
+
+const unsigned short SEG_TAB[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x67};
+const unsigned short COM_TAB[]={0x08,0x04,0x02,0x01};
+void PAUSE(unsigned short var);
+unsigned short dig[4];
+unsigned char rx;
+void main()
+{
+ unsigned short i,j,result,result1,result2,result3,result4,result5,result6;
+ int a=5;
+ int b=140;
+ int c=50;
+ _wdtc=0b10101111;
+ COM_PortC=0x00;
+ SEG_PortC=0x00;
+ _pas1=0xF0;                             //uart port0
+ _u0cr1=0xA0;                            //uart
+ _u0cr2=0xC8;                            //fH / [64 (N+1)] //BAUD:9615
+ _brg0=0x0C;                             //N=12
+ _ade=1;_emi=1;
+ _ur0e=1;_ur0f=1;_emi=1;
+ 
+ _pcs0=0x20;                             //PWM PTP0硄笵砞﹚
+ _pcs1=0x22;                             //PWM PTP1 STP0硄笵砞﹚
+ _pds0=0x12;                             //PWM PTP2 STP1硄笵砞﹚
+ _pds1=0x22;                             //PWM PTP3 STP2硄笵砞﹚
+
+ _stm0al=0; _stm0ah=0;                   //Duty=0 
+ _stm0rp=4;                              //PWM 秅戳=1024/fINT
+ _stm0c0=0b00011000;                     //fINT=fSYS(8MHz),ST1ON=1
+ _stm0c1=0b10100000;                     //PWM家Α,Active High,STM1RP北秅戳
+
+ _stm1al=0; _stm1ah=0;                   //Duty=0 
+ _stm1rp=4;                              //PWM 秅戳=1024/fINT
+ _stm1c0=0b00011000;                     //fINT=fSYS(8MHz),ST1ON=1
+ _stm1c1=0b10100000;                     //PWM家Α,Active High,STM1RP北秅戳  
+
+ _stm2al=0; _stm2ah=0;                   //Duty=0 
+ _stm2rp=4;                              //PWM 秅戳=1024/fINT
+ _stm2c0=0b00011000;                     //fINT=fSYS(8MHz),ST1ON=1
+ _stm2c1=0b10100000;                     //PWM家Α,Active High,STM1RP北秅戳
+   
+ _ptm2al=0; _ptm2ah=0;                   //Duty=0
+ _ptm2rpl=(u8)1024; _ptm2rph=1024>>8;    //PWM 秅戳=1024/fINT
+ _ptm2c0=0b00011000;                     //fINT=fSYS(8MHz),PT2ON=1
+ _ptm2c1=0b10100000;                     //PWM家Α, Active High
+ 
+ _ptm3al=0; _ptm3ah=0;                   //Duty=0
+ _ptm3rpl=(u8)1024; _ptm3rph=1024>>8;    //PWM 秅戳=1024/fINT
+ _ptm3c0=0b00011000;                     //fINT=fSYS(8MHz),PT3ON=1
+ _ptm3c1=0b10100000;                     //PWM家Α, Active High
+
+ _ptm0al=0; _ptm0ah=0;                   //Duty=0
+ _ptm0rpl=(u8)1024; _ptm0rph=1024>>8;    //PWM 秅戳=1024/fINT
+ _ptm0c0=0b00011000;                     //fINT=fSYS(8MHz),PT2ON=1
+ _ptm0c1=0b10100000;                     //PWM家Α, Active High
+ 
+ _ptm1al=0; _ptm1ah=0;                   //Duty=0
+ _ptm1rpl=(u8)1024; _ptm1rph=1024>>8;    //PWM 秅戳=1024/fINT
+ _ptm1c0=0b00011000;                     //fINT=fSYS(8MHz),PT3ON=1
+ _ptm1c1=0b10100000;                     //PWM家Α, Active High
+
+
+ while(1)
+ {
+     rx=_txr_rxr0;//屡钡Μ
+     PAUSE(5);
+   //if(rx>4095){rx=4095;}
+   dig[3]=rx/1000;
+   dig[2]=(rx/100)%10;
+   dig[1]=(rx/10)%10;
+   dig[0]=rx%10;
+   if(rx==0){result=a;result1=a;result2=a;result3=a;result4=a;result5=a;result6=a;}//沮屡Μ暗癸莱PWM北
+   if(rx==1){result=b;result1=a;result2=a;result3=a;result4=a;result5=a;result6=a;}
+   if(rx==2){result=a;result1=b;result2=a;result3=a;result4=a;result5=a;result6=a;}
+   if(rx==3){result=b;result1=b;result2=a;result3=a;result4=a;result5=a;result6=a;}
+   if(rx==4){result=a;result1=a;result2=b;result3=a;result4=a;result5=a;result6=a;}
+   if(rx==5){result=b;result1=a;result2=b;result3=a;result4=a;result5=a;result6=a;}
+   if(rx==6){result=a;result1=b;result2=b;result3=a;result4=a;result5=a;result6=a;}
+   if(rx==7){result=b;result1=b;result2=b;result3=a;result4=a;result5=a;result6=a;}
+   if(rx==8){result=a;result1=a;result2=a;result3=b;result4=a;result5=a;result6=a;}
+   if(rx==9){result=b;result1=a;result2=a;result3=b;result4=a;result5=a;result6=a;}
+   if(rx==10){result=a;result1=b;result2=a;result3=b;result4=a;result5=a;result6=a;}
+   if(rx==11){result=b;result1=b;result2=a;result3=b;result4=a;result5=a;result6=a;}
+   if(rx==12){result=a;result1=a;result2=b;result3=b;result4=a;result5=a;result6=a;}
+   if(rx==13){result=b;result1=a;result2=b;result3=b;result4=a;result5=a;result6=a;}
+   if(rx==14){result=a;result1=b;result2=b;result3=b;result4=a;result5=a;result6=a;}
+   if(rx==15){result=b;result1=b;result2=b;result3=b;result4=a;result5=a;result6=a;}
+   if(rx==16){result=a;result1=a;result2=a;result3=a;result4=b;result5=a;result6=a;}
+   if(rx==17){result=b;result1=a;result2=a;result3=a;result4=b;result5=a;result6=a;}
+   if(rx==18){result=a;result1=b;result2=a;result3=a;result4=b;result5=a;result6=a;}
+   if(rx==19){result=b;result1=b;result2=a;result3=a;result4=b;result5=a;result6=a;}
+   if(rx==20){result=a;result1=a;result2=b;result3=a;result4=b;result5=a;result6=a;}
+   if(rx==21){result=b;result1=a;result2=b;result3=a;result4=b;result5=a;result6=a;}
+   if(rx==22){result=a;result1=b;result2=b;result3=a;result4=b;result5=a;result6=a;}
+   if(rx==23){result=b;result1=b;result2=b;result3=a;result4=b;result5=a;result6=a;}
+   if(rx==24){result=a;result1=a;result2=a;result3=b;result4=b;result5=a;result6=a;}
+   if(rx==25){result=b;result1=a;result2=a;result3=b;result4=b;result5=a;result6=a;}
+   if(rx==26){result=a;result1=b;result2=a;result3=b;result4=b;result5=a;result6=a;}
+   if(rx==27){result=b;result1=b;result2=a;result3=b;result4=b;result5=a;result6=a;}
+   if(rx==28){result=a;result1=a;result2=b;result3=b;result4=b;result5=a;result6=a;}
+   if(rx==29){result=b;result1=a;result2=b;result3=b;result4=b;result5=a;result6=a;}
+   if(rx==30){result=a;result1=b;result2=b;result3=b;result4=b;result5=a;result6=a;}
+   if(rx==31){result=b;result1=b;result2=b;result3=b;result4=b;result5=a;result6=a;}
+   if(rx==32){result=a;result1=a;result2=a;result3=a;result4=a;result5=b;result6=a;}
+   if(rx==33){result=b;result1=a;result2=a;result3=a;result4=a;result5=b;result6=a;}
+   if(rx==34){result=a;result1=b;result2=a;result3=a;result4=a;result5=b;result6=a;}
+   if(rx==35){result=b;result1=b;result2=a;result3=a;result4=a;result5=b;result6=a;}
+   if(rx==36){result=a;result1=a;result2=b;result3=a;result4=a;result5=b;result6=a;}
+   if(rx==37){result=b;result1=a;result2=b;result3=a;result4=a;result5=b;result6=a;}
+   if(rx==38){result=a;result1=b;result2=b;result3=a;result4=a;result5=b;result6=a;}
+   if(rx==39){result=b;result1=b;result2=b;result3=a;result4=a;result5=b;result6=a;}
+   if(rx==40){result=a;result1=a;result2=a;result3=b;result4=a;result5=b;result6=a;}
+   if(rx==41){result=b;result1=a;result2=a;result3=b;result4=a;result5=b;result6=a;}
+   if(rx==42){result=a;result1=b;result2=a;result3=b;result4=a;result5=b;result6=a;}
+   if(rx==43){result=b;result1=b;result2=a;result3=b;result4=a;result5=b;result6=a;}
+   if(rx==44){result=a;result1=a;result2=b;result3=b;result4=a;result5=b;result6=a;}
+   if(rx==45){result=b;result1=a;result2=b;result3=b;result4=a;result5=b;result6=a;}
+   if(rx==46){result=a;result1=b;result2=b;result3=b;result4=a;result5=b;result6=a;}
+   if(rx==47){result=b;result1=b;result2=b;result3=b;result4=a;result5=b;result6=a;}
+   if(rx==48){result=a;result1=a;result2=a;result3=a;result4=b;result5=b;result6=a;}
+   if(rx==49){result=b;result1=a;result2=a;result3=a;result4=b;result5=b;result6=a;}
+   if(rx==50){result=a;result1=b;result2=a;result3=a;result4=b;result5=b;result6=a;}
+   if(rx==51){result=b;result1=b;result2=a;result3=a;result4=b;result5=b;result6=a;}
+   if(rx==52){result=a;result1=a;result2=b;result3=a;result4=b;result5=b;result6=a;}
+   if(rx==53){result=b;result1=a;result2=b;result3=a;result4=b;result5=b;result6=a;}
+   if(rx==54){result=a;result1=b;result2=b;result3=a;result4=b;result5=b;result6=a;}
+   if(rx==55){result=b;result1=b;result2=b;result3=a;result4=b;result5=b;result6=a;}
+   if(rx==56){result=a;result1=a;result2=a;result3=b;result4=b;result5=b;result6=a;}
+   if(rx==57){result=b;result1=a;result2=a;result3=b;result4=b;result5=b;result6=a;}
+   if(rx==58){result=a;result1=b;result2=a;result3=b;result4=b;result5=b;result6=a;}
+   if(rx==59){result=b;result1=b;result2=a;result3=b;result4=b;result5=b;result6=a;}
+   if(rx==60){result=a;result1=a;result2=b;result3=b;result4=b;result5=b;result6=a;}
+   if(rx==61){result=b;result1=a;result2=b;result3=b;result4=b;result5=b;result6=a;}
+   if(rx==62){result=a;result1=b;result2=b;result3=b;result4=b;result5=b;result6=a;}
+   if(rx==63){result=b;result1=b;result2=b;result3=b;result4=b;result5=b;result6=a;}
+   if(rx==64){result=a;result1=a;result2=a;result3=a;result4=a;result5=a;result6=c;}
+   if(rx==65){result=b;result1=a;result2=a;result3=a;result4=a;result5=a;result6=c;}
+   if(rx==66){result=a;result1=b;result2=a;result3=a;result4=a;result5=a;result6=c;}
+   if(rx==67){result=b;result1=b;result2=a;result3=a;result4=a;result5=a;result6=c;}
+   if(rx==68){result=a;result1=a;result2=b;result3=a;result4=a;result5=a;result6=c;}
+   if(rx==69){result=b;result1=a;result2=b;result3=a;result4=a;result5=a;result6=c;}
+   if(rx==70){result=a;result1=b;result2=b;result3=a;result4=a;result5=a;result6=c;}
+   if(rx==71){result=b;result1=b;result2=b;result3=a;result4=a;result5=a;result6=c;}
+   if(rx==72){result=a;result1=a;result2=a;result3=b;result4=a;result5=a;result6=c;}
+   if(rx==73){result=b;result1=a;result2=a;result3=b;result4=a;result5=a;result6=c;}
+   if(rx==74){result=a;result1=b;result2=a;result3=b;result4=a;result5=a;result6=c;}
+   if(rx==75){result=b;result1=b;result2=a;result3=b;result4=a;result5=a;result6=c;}
+   if(rx==76){result=a;result1=a;result2=b;result3=b;result4=a;result5=a;result6=c;}
+   if(rx==77){result=b;result1=a;result2=b;result3=b;result4=a;result5=a;result6=c;}
+   if(rx==78){result=a;result1=b;result2=b;result3=b;result4=a;result5=a;result6=c;}
+   if(rx==79){result=b;result1=b;result2=b;result3=b;result4=a;result5=a;result6=c;}
+   if(rx==80){result=a;result1=a;result2=a;result3=a;result4=b;result5=a;result6=c;}
+   if(rx==81){result=b;result1=a;result2=a;result3=a;result4=b;result5=a;result6=c;}
+   if(rx==82){result=a;result1=b;result2=a;result3=a;result4=b;result5=a;result6=c;}
+   if(rx==83){result=b;result1=b;result2=a;result3=a;result4=b;result5=a;result6=c;}
+   if(rx==84){result=a;result1=a;result2=b;result3=a;result4=b;result5=a;result6=c;}
+   if(rx==85){result=b;result1=a;result2=b;result3=a;result4=b;result5=a;result6=c;}
+   if(rx==86){result=a;result1=b;result2=b;result3=a;result4=b;result5=a;result6=c;}
+   if(rx==87){result=b;result1=b;result2=b;result3=a;result4=b;result5=a;result6=c;}
+   if(rx==88){result=a;result1=a;result2=a;result3=b;result4=b;result5=a;result6=c;}
+   if(rx==89){result=b;result1=a;result2=a;result3=b;result4=b;result5=a;result6=c;}
+   if(rx==90){result=a;result1=b;result2=a;result3=b;result4=b;result5=a;result6=c;}
+   if(rx==91){result=b;result1=b;result2=a;result3=b;result4=b;result5=a;result6=c;}
+   if(rx==92){result=a;result1=a;result2=b;result3=b;result4=b;result5=a;result6=c;}
+   if(rx==93){result=b;result1=a;result2=b;result3=b;result4=b;result5=a;result6=c;}
+   if(rx==94){result=a;result1=b;result2=b;result3=b;result4=b;result5=a;result6=c;}
+   if(rx==95){result=b;result1=b;result2=b;result3=b;result4=b;result5=a;result6=c;}
+   if(rx==96){result=a;result1=a;result2=a;result3=a;result4=a;result5=b;result6=c;}
+   if(rx==97){result=b;result1=a;result2=a;result3=a;result4=a;result5=b;result6=c;}
+   if(rx==98){result=a;result1=b;result2=a;result3=a;result4=a;result5=b;result6=c;}
+   if(rx==99){result=b;result1=b;result2=a;result3=a;result4=a;result5=b;result6=c;}
+   if(rx==100){result=a;result1=a;result2=b;result3=a;result4=a;result5=b;result6=c;}
+   if(rx==101){result=b;result1=a;result2=b;result3=a;result4=a;result5=b;result6=c;}
+   if(rx==102){result=a;result1=b;result2=b;result3=a;result4=a;result5=b;result6=c;}
+   if(rx==103){result=b;result1=b;result2=b;result3=a;result4=a;result5=b;result6=c;}
+   if(rx==104){result=a;result1=a;result2=a;result3=b;result4=a;result5=b;result6=c;}
+   if(rx==105){result=b;result1=a;result2=a;result3=b;result4=a;result5=b;result6=c;}
+   if(rx==106){result=a;result1=b;result2=a;result3=b;result4=a;result5=b;result6=c;}
+   if(rx==107){result=b;result1=b;result2=a;result3=b;result4=a;result5=b;result6=c;}
+   if(rx==108){result=a;result1=a;result2=b;result3=b;result4=a;result5=b;result6=c;}
+   if(rx==109){result=b;result1=a;result2=b;result3=b;result4=a;result5=b;result6=c;}
+   if(rx==110){result=a;result1=b;result2=b;result3=b;result4=a;result5=b;result6=c;}
+   if(rx==111){result=b;result1=b;result2=b;result3=b;result4=a;result5=b;result6=c;}
+   if(rx==112){result=a;result1=a;result2=a;result3=a;result4=b;result5=b;result6=c;}
+   if(rx==113){result=b;result1=a;result2=a;result3=a;result4=b;result5=b;result6=c;}
+   if(rx==114){result=a;result1=b;result2=a;result3=a;result4=b;result5=b;result6=c;}
+   if(rx==115){result=b;result1=b;result2=a;result3=a;result4=b;result5=b;result6=c;}
+   if(rx==116){result=a;result1=a;result2=b;result3=a;result4=b;result5=b;result6=c;}
+   if(rx==117){result=b;result1=a;result2=b;result3=a;result4=b;result5=b;result6=c;}
+   if(rx==118){result=a;result1=b;result2=b;result3=a;result4=b;result5=b;result6=c;}
+   if(rx==119){result=b;result1=b;result2=b;result3=a;result4=b;result5=b;result6=c;}
+   if(rx==120){result=a;result1=a;result2=a;result3=b;result4=b;result5=b;result6=c;}
+   if(rx==121){result=b;result1=a;result2=a;result3=b;result4=b;result5=b;result6=c;}
+   if(rx==122){result=a;result1=b;result2=a;result3=b;result4=b;result5=b;result6=c;}
+   if(rx==123){result=b;result1=b;result2=a;result3=b;result4=b;result5=b;result6=c;}
+   if(rx==124){result=a;result1=a;result2=b;result3=b;result4=b;result5=b;result6=c;}
+   if(rx==125){result=b;result1=a;result2=b;result3=b;result4=b;result5=b;result6=c;}
+   if(rx==126){result=a;result1=b;result2=b;result3=b;result4=b;result5=b;result6=c;}
+   if(rx==127){result=b;result1=b;result2=b;result3=b;result4=b;result5=b;result6=c;}
+ 
+  for(i=0;i<4;i++)
+  {
+   SEG_Port=SEG_TAB[dig[i]];
+   COM_Port=COM_TAB[i];
+   PAUSE(50);
+  }
+  _stm0al=(u8)result;  _stm0ah=result>>8;	//╂PWM北
+  _stm1al=(u8)result1; _stm1ah=result1>>8;	//PWM北
+  _stm2al=(u8)result2; _stm2ah=result2>>8;	//いPWM北
+  _ptm2al=(u8)result3; _ptm2ah=result3>>8;      //礚PWM北
+  _ptm3al=(u8)result4; _ptm3ah=result4>>8;      //PWM北
+  _ptm0al=(u8)result5; _ptm0ah=result5>>8;      //も得PWM北
+  _ptm1al=(u8)result6; _ptm1ah=result6>>8;      //も羥PWM北
+ }
+}
+
+void PAUSE(unsigned short var)
+{
+ unsigned i,j;
+ for(i=0;i<var;i++)
+ {
+  for(j=0;j<25;j++) GCC_NOP();
+ }
+}

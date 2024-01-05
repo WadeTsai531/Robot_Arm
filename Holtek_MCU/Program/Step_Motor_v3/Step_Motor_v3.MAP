@@ -1,0 +1,104 @@
+
+Linker Version 8.7.7.190806
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+     00h     0002h     0004h    0003h      CODE               @start (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+     00h     0005h     0012h    000eh      CODE               _ptm_delay (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+     00h     0013h     001ch    000ah      CODE               _ptm_setup (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+     00h     001dh     0043h    0027h      CODE               _main (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0084h     0084h    0000h      LOCAL    0         @dummy (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+     00h     0082h     0083h    0002h      LOCAL    3         _main (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+     00h     0080h     0080h    0000h      LOCAL    0         _ptm_setup (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+     00h     0080h     0081h    0002h      LOCAL    7         _ptm_delay (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     001dh              _main
+     0005h              _ptm_delay
+     0080h              _ptm_delay_2
+     0013h              _ptm_setup
+
+     Address            Public by Value
+     0005h              _ptm_delay
+     0013h              _ptm_setup
+     001dh              _main
+     0080h              _ptm_delay_2
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     0044h    0%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     0044h    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0004h    3%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     0004h    0%
+
+Use Stack Count
+_main: 1
+_motor_callb: 1
+_motor_deg: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _ptm_setup (1)
+            _ptm_delay (1)
+    _motor_callb
+        _ptm_delay (0)
+    _motor_deg
+        _ptm_delay (0)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\Step_Motor_v3\STEP_MOTOR_V3.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

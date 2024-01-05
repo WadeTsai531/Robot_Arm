@@ -1,0 +1,243 @@
+#include "HT66F2390.h"
+#define SEG_Port   _pg
+#define SEG_PortC  _pgc
+#define COM_Port   _pf
+#define COM_PortC  _pfc
+const unsigned short SEG_TAB[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x67};
+const unsigned short COM_TAB[]={0x08,0x04,0x02,0x01};
+void PAUSE(unsigned short var);
+unsigned short dig[4];
+unsigned char tx;
+
+void main()
+	{
+	unsigned short i,j,result,result1,result2,result3,result4,result5,result6;
+	int a=120; //大拇指
+        int b=70;  //食指
+        int c=85;  //中指
+        int d=50;  //無名指
+        int e=110; //小指
+	int f=2000; //手腕
+	int g=2500; //手臂
+	_wdtc=0b10101111;
+	COM_PortC=0x00;
+	SEG_PortC=0x00;
+	_sadc0=0x30;                            //AN0
+	_sadc0=0x31;                            //AN1
+	_sadc0=0x32;                            //AN2
+	_sadc0=0x33;                            //AN3
+	_sadc0=0x34;                            //AN4
+	_sadc0=0x35;                            //AN5
+	_sadc0=0x36;                            //AN6
+	
+	_sadc1=0x04;
+	_pas1=0xF0;                             //uart port0 PA6:RX0 PA7:TX0
+	_u0cr1=0xA0;                            //uart 選擇8BIT格式傳輸
+        _u0cr2=0xCF;                            //fH / [64 (N+1)] //fH(系統頻率設定是8MHZ) BAUD:9615 設置低波特率
+        _brg0=0x0C;                             //N=12
+	
+	_pcs0=0xFF;                             //AD腳位 AN0 AN1 AN2 AN3通道
+	_pcs1=0x3F;                             //AD腳位 AN4 AN5 AN6通道
+	_ade=1;
+	_emi=1;
+	//_mf5e=1;
+	_ur0e=1;                 //中斷
+	while(1)
+	{
+	_sadc0=0x30;   
+		 _start=1;_start=0;//AD轉換步驟
+		 while(_adbz);
+		 result6=(_sadoh<<8)+_sadol;
+		 if(result6>4096){result6=4096;}//result為AD轉出來的值
+		 
+	_sadc0=0x31;   
+		 _start=1;_start=0;
+		 while(_adbz);
+		 result5=(_sadoh<<8)+_sadol;
+		 if(result5>4096){result5=4096;}
+	
+	_sadc0=0x32;   
+		 _start=1;_start=0;
+		 while(_adbz);
+		 result4=(_sadoh<<8)+_sadol;
+		 if(result4>4096){result4=4096;}
+	
+	_sadc0=0x33;   
+		 _start=1;_start=0;
+		 while(_adbz);
+		 result3=(_sadoh<<8)+_sadol;
+		 if(result3>4096){result3=4096;}
+		 
+	_sadc0=0x34;   
+		 _start=1;_start=0;
+		 while(_adbz);
+		 result2=(_sadoh<<8)+_sadol;
+		 if(result2>4096){result2=4096;}
+		 
+	_sadc0=0x35;   
+		 _start=1;_start=0;
+		 while(_adbz);
+		 result1=(_sadoh<<8)+_sadol;
+		 if(result1>4096){result1=4096;}
+		 
+	_sadc0=0x36;   
+		 _start=1;_start=0;
+		 while(_adbz);
+		 result=(_sadoh<<8)+_sadol;
+		 if(result>4096){result=4096;}
+        //七段顯示值
+		dig[3]=result5/1000;
+		dig[2]=(result5/100)%10;
+		dig[1]=(result5/10)%10;
+		dig[0]=result5%10;
+		
+		
+		if(result<a && result1<b && result2<c && result3<d && result4<e && result5<f && result6<g){tx=0;}//判斷個個感測器的值讓藍芽傳一個代碼
+		if(result>a && result1<b && result2<c && result3<d && result4<e && result5<f && result6<g){tx=1;}
+		if(result<a && result1>b && result2<c && result3<d && result4<e && result5<f && result6<g){tx=2;}
+		if(result>a && result1>b && result2<c && result3<d && result4<e && result5<f && result6<g){tx=3;}
+		if(result<a && result1<b && result2>c && result3<d && result4<e && result5<f && result6<g){tx=4;}
+		if(result>a && result1<b && result2>c && result3<d && result4<e && result5<f && result6<g){tx=5;}
+		if(result<a && result1>b && result2>c && result3<d && result4<e && result5<f && result6<g){tx=6;}
+		if(result>a && result1>b && result2>c && result3<d && result4<e && result5<f && result6<g){tx=7;}
+		if(result<a && result1<b && result2<c && result3>d && result4<e && result5<f && result6<g){tx=8;}
+		if(result>a && result1<b && result2<c && result3>d && result4<e && result5<f && result6<g){tx=9;}
+		if(result<a && result1>b && result2<c && result3>d && result4<e && result5<f && result6<g){tx=10;}
+		if(result>a && result1>b && result2<c && result3>d && result4<e && result5<f && result6<g){tx=11;}
+		if(result<a && result1<b && result2>c && result3>d && result4<e && result5<f && result6<g){tx=12;}
+		if(result>a && result1<b && result2>c && result3>d && result4<e && result5<f && result6<g){tx=13;}
+		if(result<a && result1>b && result2>c && result3>d && result4<e && result5<f && result6<g){tx=14;}
+		if(result>a && result1>b && result2>c && result3>d && result4<e && result5<f && result6<g){tx=15;}
+		if(result<a && result1<b && result2<c && result3<d && result4>e && result5<f && result6<g){tx=16;}
+		if(result>a && result1<b && result2<c && result3<d && result4>e && result5<f && result6<g){tx=17;}
+		if(result<a && result1>b && result2<c && result3<d && result4>e && result5<f && result6<g){tx=18;}
+		if(result>a && result1>b && result2<c && result3<d && result4>e && result5<f && result6<g){tx=19;}
+		if(result<a && result1<b && result2>c && result3<d && result4>e && result5<f && result6<g){tx=20;}
+		if(result>a && result1<b && result2>c && result3<d && result4>e && result5<f && result6<g){tx=21;}
+		if(result<a && result1>b && result2>c && result3<d && result4>e && result5<f && result6<g){tx=22;}
+		if(result>a && result1>b && result2>c && result3<d && result4>e && result5<f && result6<g){tx=23;}
+		if(result<a && result1<b && result2<c && result3>d && result4>e && result5<f && result6<g){tx=24;}
+		if(result>a && result1<b && result2<c && result3>d && result4>e && result5<f && result6<g){tx=25;}
+		if(result<a && result1>b && result2<c && result3>d && result4>e && result5<f && result6<g){tx=26;}
+		if(result>a && result1>b && result2<c && result3>d && result4>e && result5<f && result6<g){tx=27;}
+		if(result<a && result1<b && result2>c && result3>d && result4>e && result5<f && result6<g){tx=28;}
+		if(result>a && result1<b && result2>c && result3>d && result4>e && result5<f && result6<g){tx=29;}
+		if(result<a && result1>b && result2>c && result3>d && result4>e && result5<f && result6<g){tx=30;}
+		if(result>a && result1>b && result2>c && result3>d && result4>e && result5<f && result6<g){tx=31;}
+		if(result<a && result1<b && result2<c && result3<d && result4<e && result5>f && result6<g){tx=32;}
+		if(result>a && result1<b && result2<c && result3<d && result4<e && result5>f && result6<g){tx=33;}
+		if(result<a && result1>b && result2<c && result3<d && result4<e && result5>f && result6<g){tx=34;}
+		if(result>a && result1>b && result2<c && result3<d && result4<e && result5>f && result6<g){tx=35;}
+		if(result<a && result1<b && result2>c && result3<d && result4<e && result5>f && result6<g){tx=36;}
+		if(result>a && result1<b && result2>c && result3<d && result4<e && result5>f && result6<g){tx=37;}
+		if(result<a && result1>b && result2>c && result3<d && result4<e && result5>f && result6<g){tx=38;}
+		if(result>a && result1>b && result2>c && result3<d && result4<e && result5>f && result6<g){tx=39;}
+		if(result<a && result1<b && result2<c && result3>d && result4<e && result5>f && result6<g){tx=40;}
+		if(result>a && result1<b && result2<c && result3>d && result4<e && result5>f && result6<g){tx=41;}
+		if(result<a && result1>b && result2<c && result3>d && result4<e && result5>f && result6<g){tx=42;}
+		if(result>a && result1>b && result2<c && result3>d && result4<e && result5>f && result6<g){tx=43;}
+		if(result<a && result1<b && result2>c && result3>d && result4<e && result5>f && result6<g){tx=44;}
+		if(result>a && result1<b && result2>c && result3>d && result4<e && result5>f && result6<g){tx=45;}
+		if(result<a && result1>b && result2>c && result3>d && result4<e && result5>f && result6<g){tx=46;}
+		if(result>a && result1>b && result2>c && result3>d && result4<e && result5>f && result6<g){tx=47;}
+		if(result<a && result1<b && result2<c && result3<d && result4>e && result5>f && result6<g){tx=48;}
+		if(result>a && result1<b && result2<c && result3<d && result4>e && result5>f && result6<g){tx=49;}
+		if(result<a && result1>b && result2<c && result3<d && result4>e && result5>f && result6<g){tx=50;}
+		if(result>a && result1>b && result2<c && result3<d && result4>e && result5>f && result6<g){tx=51;}
+		if(result<a && result1<b && result2>c && result3<d && result4>e && result5>f && result6<g){tx=52;}
+		if(result>a && result1<b && result2>c && result3<d && result4>e && result5>f && result6<g){tx=53;}
+		if(result<a && result1>b && result2>c && result3<d && result4>e && result5>f && result6<g){tx=54;}
+		if(result>a && result1>b && result2>c && result3<d && result4>e && result5>f && result6<g){tx=55;}
+		if(result<a && result1<b && result2<c && result3>d && result4>e && result5>f && result6<g){tx=56;}
+		if(result>a && result1<b && result2<c && result3>d && result4>e && result5>f && result6<g){tx=57;}
+		if(result<a && result1>b && result2<c && result3>d && result4>e && result5>f && result6<g){tx=58;}
+		if(result>a && result1>b && result2<c && result3>d && result4>e && result5>f && result6<g){tx=59;}
+		if(result<a && result1<b && result2>c && result3>d && result4>e && result5>f && result6<g){tx=60;}
+		if(result>a && result1<b && result2>c && result3>d && result4>e && result5>f && result6<g){tx=61;}
+		if(result<a && result1>b && result2>c && result3>d && result4>e && result5>f && result6<g){tx=62;}
+		if(result>a && result1>b && result2>c && result3>d && result4>e && result5>f && result6<g){tx=63;}
+		if(result<a && result1<b && result2<c && result3<d && result4<e && result5<f && result6>g){tx=64;}
+		if(result>a && result1<b && result2<c && result3<d && result4<e && result5<f && result6>g){tx=65;}
+		if(result<a && result1>b && result2<c && result3<d && result4<e && result5<f && result6>g){tx=66;}
+		if(result>a && result1>b && result2<c && result3<d && result4<e && result5<f && result6>g){tx=67;}
+		if(result<a && result1<b && result2>c && result3<d && result4<e && result5<f && result6>g){tx=68;}
+		if(result>a && result1<b && result2>c && result3<d && result4<e && result5<f && result6>g){tx=69;}
+		if(result<a && result1>b && result2>c && result3<d && result4<e && result5<f && result6>g){tx=70;}
+		if(result>a && result1>b && result2>c && result3<d && result4<e && result5<f && result6>g){tx=71;}
+		if(result<a && result1<b && result2<c && result3>d && result4<e && result5<f && result6>g){tx=72;}
+		if(result>a && result1<b && result2<c && result3>d && result4<e && result5<f && result6>g){tx=73;}
+		if(result<a && result1>b && result2<c && result3>d && result4<e && result5<f && result6>g){tx=74;}
+		if(result>a && result1>b && result2<c && result3>d && result4<e && result5<f && result6>g){tx=75;}
+		if(result<a && result1<b && result2>c && result3>d && result4<e && result5<f && result6>g){tx=76;}
+		if(result>a && result1<b && result2>c && result3>d && result4<e && result5<f && result6>g){tx=77;}
+		if(result<a && result1>b && result2>c && result3>d && result4<e && result5<f && result6>g){tx=78;}
+		if(result>a && result1>b && result2>c && result3>d && result4<e && result5<f && result6>g){tx=79;}
+		if(result<a && result1<b && result2<c && result3<d && result4>e && result5<f && result6>g){tx=80;}
+		if(result>a && result1<b && result2<c && result3<d && result4>e && result5<f && result6>g){tx=81;}
+		if(result<a && result1>b && result2<c && result3<d && result4>e && result5<f && result6>g){tx=82;}
+		if(result>a && result1>b && result2<c && result3<d && result4>e && result5<f && result6>g){tx=83;}
+		if(result<a && result1<b && result2>c && result3<d && result4>e && result5<f && result6>g){tx=84;}
+		if(result>a && result1<b && result2>c && result3<d && result4>e && result5<f && result6>g){tx=85;}
+		if(result<a && result1>b && result2>c && result3<d && result4>e && result5<f && result6>g){tx=86;}
+		if(result>a && result1>b && result2>c && result3<d && result4>e && result5<f && result6>g){tx=87;}
+		if(result<a && result1<b && result2<c && result3>d && result4>e && result5<f && result6>g){tx=88;}
+		if(result>a && result1<b && result2<c && result3>d && result4>e && result5<f && result6>g){tx=89;}
+		if(result<a && result1>b && result2<c && result3>d && result4>e && result5<f && result6>g){tx=90;}
+		if(result>a && result1>b && result2<c && result3>d && result4>e && result5<f && result6>g){tx=91;}
+		if(result<a && result1<b && result2>c && result3>d && result4>e && result5<f && result6>g){tx=92;}
+		if(result>a && result1<b && result2>c && result3>d && result4>e && result5<f && result6>g){tx=93;}
+		if(result<a && result1>b && result2>c && result3>d && result4>e && result5<f && result6>g){tx=94;}
+		if(result>a && result1>b && result2>c && result3>d && result4>e && result5<f && result6>g){tx=95;}
+		if(result<a && result1<b && result2<c && result3<d && result4<e && result5>f && result6>g){tx=96;}
+		if(result>a && result1<b && result2<c && result3<d && result4<e && result5>f && result6>g){tx=97;}
+		if(result<a && result1>b && result2<c && result3<d && result4<e && result5>f && result6>g){tx=98;}
+		if(result>a && result1>b && result2<c && result3<d && result4<e && result5>f && result6>g){tx=99;}
+		if(result<a && result1<b && result2>c && result3<d && result4<e && result5>f && result6>g){tx=100;}
+		if(result>a && result1<b && result2>c && result3<d && result4<e && result5>f && result6>g){tx=101;}
+		if(result<a && result1>b && result2>c && result3<d && result4<e && result5>f && result6>g){tx=102;}
+		if(result>a && result1>b && result2>c && result3<d && result4<e && result5>f && result6>g){tx=103;}
+		if(result<a && result1<b && result2<c && result3>d && result4<e && result5>f && result6>g){tx=104;}
+		if(result>a && result1<b && result2<c && result3>d && result4<e && result5>f && result6>g){tx=105;}
+		if(result<a && result1>b && result2<c && result3>d && result4<e && result5>f && result6>g){tx=106;}
+		if(result>a && result1>b && result2<c && result3>d && result4<e && result5>f && result6>g){tx=107;}
+		if(result<a && result1<b && result2>c && result3>d && result4<e && result5>f && result6>g){tx=108;}
+		if(result>a && result1<b && result2>c && result3>d && result4<e && result5>f && result6>g){tx=109;}
+		if(result<a && result1>b && result2>c && result3>d && result4<e && result5>f && result6>g){tx=110;}
+		if(result>a && result1>b && result2>c && result3>d && result4<e && result5>f && result6>g){tx=111;}
+		if(result<a && result1<b && result2<c && result3<d && result4>e && result5>f && result6>g){tx=112;}
+		if(result>a && result1<b && result2<c && result3<d && result4>e && result5>f && result6>g){tx=113;}
+		if(result<a && result1>b && result2<c && result3<d && result4>e && result5>f && result6>g){tx=114;}
+		if(result>a && result1>b && result2<c && result3<d && result4>e && result5>f && result6>g){tx=115;}
+		if(result<a && result1<b && result2>c && result3<d && result4>e && result5>f && result6>g){tx=116;}
+		if(result>a && result1<b && result2>c && result3<d && result4>e && result5>f && result6>g){tx=117;}
+		if(result<a && result1>b && result2>c && result3<d && result4>e && result5>f && result6>g){tx=118;}
+		if(result>a && result1>b && result2>c && result3<d && result4>e && result5>f && result6>g){tx=119;}
+		if(result<a && result1<b && result2<c && result3>d && result4>e && result5>f && result6>g){tx=120;}
+		if(result>a && result1<b && result2<c && result3>d && result4>e && result5>f && result6>g){tx=121;}
+		if(result<a && result1>b && result2<c && result3>d && result4>e && result5>f && result6>g){tx=122;}
+		if(result>a && result1>b && result2<c && result3>d && result4>e && result5>f && result6>g){tx=123;}
+		if(result<a && result1<b && result2>c && result3>d && result4>e && result5>f && result6>g){tx=124;}
+		if(result>a && result1<b && result2>c && result3>d && result4>e && result5>f && result6>g){tx=125;}
+		if(result<a && result1>b && result2>c && result3>d && result4>e && result5>f && result6>g){tx=126;}
+		if(result>a && result1>b && result2>c && result3>d && result4>e && result5>f && result6>g){tx=127;}
+		
+		_txr_rxr0=tx;//藍芽傳送
+		PAUSE(5);
+	
+		for(i=0;i<4;i++)
+		{
+			SEG_Port=SEG_TAB[dig[i]];
+			COM_Port=COM_TAB[i];
+			PAUSE(50);
+		}		
+	}
+}
+
+void PAUSE(unsigned short var)
+{
+	unsigned i,j;
+	for(i=0;i<var;i++)
+	{
+		for(j=0;j<25;j++) GCC_NOP();
+	}
+}

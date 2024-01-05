@@ -1,0 +1,180 @@
+
+Linker Version 8.7.7.190806
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ
+Input Object File: D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrmc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0001h    0002h      CODE               @code (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0002h     0012h    0011h      CODE               _timer (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0013h     0030h    001eh      CODE               _Uart_R (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0031h     0034h    0004h      CODE               @ROMDATA_BASE (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\STARTUP1_L.OBJ)
+     00h     0038h     003bh    0004h      CODE               @timer_code (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     003ch     003fh    0004h      CODE               @Uart_R_code (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0040h     0062h    0023h      CODE               @start (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0063h     0070h    000eh      CODE               _ptm_delay (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0071h     0079h    0009h      CODE               _ptm_setup (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     007ah     0089h    0010h      CODE               _UART_Setup (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     008ah     00a2h    0019h      CODE               _main (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     00a3h     00c8h    0026h      CODE               _Read_Data (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0080h     0080h    0001h      DATA     2         @data_r138 (isr:ra~rh)
+     00h     0081h     0081h    0001h      DATA     2         @data_r238 (isr:ra~rh)
+     00h     0082h     0082h    0001h      DATA     3         @data_ra38 (isr:ra~rh)
+     00h     0083h     0083h    0001h      DATA     4         @data_rb3c (isr:ra~rh)
+     00h     0084h     0084h    0001h      DATA     4         @data_rc3c (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     3         @data_ra3c (isr:ra~rh)
+     00h     0086h     0086h    0001h      DATA     2         @data_r13c (isr:ra~rh)
+     00h     0087h     0087h    0001h      DATA     2         @data_r23c (isr:ra~rh)
+     00h     008ah     008bh    0002h      DATA     3         @HCCINIT_kn (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     008ch     0095h    000ah      DATA     0         @HCCINIT0_Data (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0096h     009fh    000ah      DATA     0         @HCCINIT0_R_Data (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     00a0h     00a0h    0001h      DATA     2         @data_r338 (isr:ra~rh)
+     00h     00a1h     00a1h    0001h      DATA     2         @data_r33c (isr:ra~rh)
+     00h     00a2h     00a2h    0001h      DATA     2         @data_r43c (isr:ra~rh)
+     00h     00a3h     00a3h    0001h      DATA     2         @data_r53c (isr:ra~rh)
+     00h     00a4h     00a4h    0001h      DATA     2         @data_r63c (isr:ra~rh)
+     00h     00a5h     00a5h    0001h      DATA     2         @data_r73c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0088h     0088h    0000h      LOCAL    0         @dummy56 (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _timer (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         @dummy60 (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _Uart_R (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _Read_Data (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     008ah     008ah    0000h      LOCAL    0         @dummy (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     008ah     008ah    0000h      LOCAL    0         _main (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _UART_Setup (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0088h     0088h    0000h      LOCAL    0         _ptm_setup (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+     00h     0088h     0089h    0002h      LOCAL    3         _ptm_delay (D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     008ch              _Data
+     0096h              _R_Data
+     00a3h              _Read_Data
+     007ah              _UART_Setup
+     0013h              _Uart_R
+     008ah              _kn
+     008ah              _main
+     0063h              _ptm_delay
+     0088h              _ptm_delay_2
+     0071h              _ptm_setup
+     0002h              _timer
+     0080h              r138
+     0086h              r13c
+     0081h              r238
+     0087h              r23c
+     00a0h              r338
+     00a1h              r33c
+     00a2h              r43c
+     00a3h              r53c
+     00a4h              r63c
+     00a5h              r73c
+     0082h              ra38
+     0085h              ra3c
+     0083h              rb3c
+     0084h              rc3c
+     0030h              startup_value_1
+
+     Address            Public by Value
+     0002h              _timer
+     0013h              _Uart_R
+     0030h              startup_value_1
+     0063h              _ptm_delay
+     0071h              _ptm_setup
+     007ah              _UART_Setup
+     0080h              r138
+     0081h              r238
+     0082h              ra38
+     0083h              rb3c
+     0084h              rc3c
+     0085h              ra3c
+     0086h              r13c
+     0087h              r23c
+     0088h              _ptm_delay_2
+     008ah              _main
+     008ah              _kn
+     008ch              _Data
+     0096h              _R_Data
+     00a0h              r338
+     00a1h              r33c
+     00a2h              r43c
+     00a3h              r53c
+     00a3h              _Read_Data
+     00a4h              r63c
+     00a5h              r73c
+
+
+ROM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       2000h     00c6h    2%
+     01h       2000h     0000h    0%
+     02h       2000h     0000h    0%
+     03h       2000h     0000h    0%
+     04h       2000h     0000h    0%
+     05h       2000h     0000h    0%
+     06h       2000h     0000h    0%
+     07h       2000h     0000h    0%
+     Total     10000h     00c6h    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0026h    29%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     04h       0080h     0000h    0%
+     05h       0080h     0000h    0%
+     06h       0080h     0000h    0%
+     07h       0080h     0000h    0%
+     08h       0080h     0000h    0%
+     09h       0080h     0000h    0%
+     0ah       0080h     0000h    0%
+     0bh       0080h     0000h    0%
+     0ch       0080h     0000h    0%
+     0dh       0080h     0000h    0%
+     0eh       0080h     0000h    0%
+     0fh       0080h     0000h    0%
+     10h       0080h     0000h    0%
+     11h       0080h     0000h    0%
+     12h       0080h     0000h    0%
+     13h       0080h     0000h    0%
+     14h       0080h     0000h    0%
+     15h       0080h     0000h    0%
+     16h       0080h     0000h    0%
+     17h       0080h     0000h    0%
+     18h       0080h     0000h    0%
+     19h       0080h     0000h    0%
+     1ah       0080h     0000h    0%
+     1bh       0080h     0000h    0%
+     1ch       0080h     0000h    0%
+     1dh       0080h     0000h    0%
+     1eh       0080h     0000h    0%
+     1fh       0080h     0000h    0%
+     Total     1000h     0026h    0%
+
+Use Stack Count
+_timer: 0
+_Uart_R: 1
+_main: 1
+
+Call Tree
+    @dummy56
+        _timer (0)
+    @dummy60
+        _Uart_R (0)
+            _Read_Data (1)
+    @dummy
+        _main (0)
+            _UART_Setup (1)
+            _ptm_setup (1)
+            _ptm_delay (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'D:\Wade\Project\Robot_Arm\Holtek_MCU\Program\ptm_test_v1\PTM_TEST_V1.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)
